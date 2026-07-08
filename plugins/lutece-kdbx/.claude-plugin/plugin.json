@@ -1,0 +1,11 @@
+{
+  "name": "lutece-kdbx",
+  "displayName": "Lutèce KDBX Tools",
+  "description": "PR/MR (GitHub/GitLab) et API Redmine via des tokens d'un coffre KeePassXC, sans jamais les exposer. Inclut fork + PR vers develop*, et interrogation du bugtracker.",
+  "version": "1.0.0",
+  "author": {
+    "name": "François Merlin",
+    "email": "FrancoisEric.Merlin@paris.fr"
+  },
+  "license": "MIT"
+}

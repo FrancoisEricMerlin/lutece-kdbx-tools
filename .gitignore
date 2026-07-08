@@ -1,0 +1,13 @@
+# Secrets — ne JAMAIS versionner
+*.kdbx
+*.kdbx.*
+.netrc
+.git-credentials
+*.pat
+*.token
+.env
+.env.*
+
+# Divers
+*.log
+.DS_Store

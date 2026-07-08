@@ -1,0 +1,18 @@
+{
+  "name": "lutece-kdbx-tools",
+  "metadata": {
+    "description": "Outils Claude Code pour le workflow lutece-platform : PR/MR et API Redmine via un coffre KeePassXC.",
+    "version": "1.0.0"
+  },
+  "owner": {
+    "name": "François Merlin",
+    "email": "FrancoisEric.Merlin@paris.fr"
+  },
+  "plugins": [
+    {
+      "name": "lutece-kdbx",
+      "source": "./plugins/lutece-kdbx",
+      "description": "PR/MR (GitHub/GitLab) et API Redmine via des tokens rangés dans un coffre KeePassXC, sans jamais les exposer. Workflow lutece-platform (fork, PR vers develop*, bugtracker)."
+    }
+  ]
+}
