@@ -12,7 +12,7 @@
     {
       "name": "lutece-kdbx",
       "source": "./plugins/lutece-kdbx",
-      "description": "PR/MR (GitHub/GitLab) et API Redmine via des tokens rangés dans un coffre KeePassXC, sans jamais les exposer. Workflow lutece-platform (fork, PR vers develop*, bugtracker)."
+      "description": "PR/MR (GitHub/GitLab) et API Redmine via des tokens rangés dans un coffre KeePassXC, sans jamais les exposer. Workflow lutece-platform (fork, PR vers develop*, bugtracker). Build Maven multi-JDK via toolchains (targetJdk)."
     }
   ]
 }
