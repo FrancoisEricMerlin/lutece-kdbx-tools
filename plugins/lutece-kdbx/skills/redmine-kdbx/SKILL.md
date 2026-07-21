@@ -1,6 +1,6 @@
 ---
 name: redmine-kdbx
-description: Interroger l'API REST Redmine (bugtracker) en récupérant la clé API depuis un coffre KeePassXC, sans jamais exposer la clé. À utiliser dès que l'utilisateur veut lister/consulter/créer/modifier des projets ou tickets Redmine, ou parle du bugtracker Lutece (dev.lutece.paris.fr/bugtracker).
+description: Interroger l'API REST Redmine (bugtracker) en récupérant la clé API depuis un coffre KeePassXC, sans jamais exposer la clé. À utiliser dès que l'utilisateur veut consulter des projets ou lister/consulter/créer/modifier des tickets Redmine, ou parle du bugtracker Lutece (dev.lutece.paris.fr/bugtracker). Ne JAMAIS créer/modifier/supprimer un projet Redmine.
 argument-hint: [chemin API redmine, ex. "issues.json?project_id=extendcomm&status_id=open"]
 allowed-tools: Bash
 ---
@@ -74,6 +74,10 @@ bash "$S" "issues.json" -X POST -H "Content-Type: application/json" \
 
 ## Règles impératives
 
+- **INTERDICTION ABSOLUE sur les PROJETS Redmine** : ne JAMAIS créer, modifier
+  ni supprimer un projet (aucun `POST`/`PUT`/`DELETE` sur `projects.json` ou
+  `projects/<id>.json`). Seule la **consultation** des projets est autorisée. La
+  gestion des **tickets** (issues) reste permise.
 - **JAMAIS `--noproxy`** : l'accès à `dev.lutece.paris.fr` DOIT passer par le proxy (sinon timeout). `redmine.sh` respecte déjà cette règle.
 - **Ne jamais afficher** la clé API ni la passphrase (pas de `echo "$KEY"`, pas de `env`, etc.).
 - Toujours ajouter `--max-time` (déjà dans le script) pour éviter de bloquer.
